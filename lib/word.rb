@@ -12,7 +12,8 @@ class Word
   private
 
   def pick_word
-    words = File.readlines('./word_list.txt')
+    path = File.expand_path('../word_list.txt', __dir__)
+    words = File.readlines(path)
                 .map(&:chomp)
                 .select { |word| word.length > 5 && word.length < 12 }
     words.sample
