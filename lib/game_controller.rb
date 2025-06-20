@@ -1,3 +1,4 @@
+# game_controller.rb
 # frozen_string_literal: true
 
 require_relative 'board'
@@ -6,7 +7,6 @@ require_relative 'word'
 # This class controls the game logic and flow.
 class GameController
   def initialize
-    @tries_left = 6
     @word = Word.new.word
     @board = Board.new(@word)
   end

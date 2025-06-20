@@ -1,3 +1,4 @@
+# hangman_stages.rb
 # frozen_string_literal: true
 
 require 'colorize'
