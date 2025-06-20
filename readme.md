@@ -23,7 +23,6 @@ A simple command-line implementation of the classic game Hangman, written in Rub
 │   ├── board.rb
 │   ├── game_controller.rb
 │   ├── hangman_art.rb
-│   ├── word_list.txt
 │   └── word.rb
 ├── main.rb
 └── word_list.txt
