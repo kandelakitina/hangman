@@ -12,6 +12,7 @@ A simple command-line implementation of the classic game Hangman, written in Rub
 
 ## Project structure
 
+```
 .
 ├── flake.lock
 ├── flake.nix
@@ -26,6 +27,7 @@ A simple command-line implementation of the classic game Hangman, written in Rub
 │   └── word.rb
 ├── main.rb
 └── word_list.txt
+```
 
 ## Run on Nix
 
