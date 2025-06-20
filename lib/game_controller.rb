@@ -9,13 +9,14 @@ class GameController
   def initialize
     @word = Word.new.word
     @board = Board.new(@word)
+    @tries_left = 6
   end
 
   def play
     until game_over?
       puts "TEST: Word is #{@word}"
       check_guess
-      @board.display
+      @board.display(@tries_left)
     end
     puts "Game over. The word was: #{@word}"
   end
@@ -39,11 +40,11 @@ class GameController
         # puts @board.guessed_letters
       end
     else
-      @board.tries_left -= 1
+      @tries_left -= 1
     end
   end
 
   def game_over?
-    @board.tries_left.zero? || @board.win
+    @tries_left.zero? || @board.win
   end
 end

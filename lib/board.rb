@@ -10,15 +10,14 @@ class Board
 
   def initialize(word)
     @word = word
-    @tries_left = 6
     @guessed_letters = []
   end
 
-  def display
+  def display(tries_left)
     puts "Word: #{masked_word}"
     # puts "Guessed letters: #{@guessed_letters}"
-    puts "Tries left: #{@tries_left}"
-    puts HANGMAN_STAGES[6 - @tries_left]
+    puts "Tries left: #{tries_left}"
+    puts HANGMAN_STAGES[6 - tries_left]
   end
 
   def win
