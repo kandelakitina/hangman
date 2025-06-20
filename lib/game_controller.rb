@@ -6,20 +6,23 @@ require_relative 'word'
 
 # This class controls the game logic and flow.
 class GameController
+  MAX_TRIES = 6
+
   def initialize
     @word = Word.new.word
     @board = Board.new
-    @tries_left = 6
+    @tries_left = MAX_TRIES
     @guessed_letters = []
   end
 
   def play
     until game_over?
+      # Show for debugging only
       puts "TEST: Word is #{@word}"
       check_guess
       @board.display(masked_word, @tries_left)
     end
-    puts "Game over. The word was: #{@word}"
+    puts win? ? 'You won!' : "You lost. The word was: '#{@word}'"
   end
 
   private
@@ -47,15 +50,10 @@ class GameController
   end
 
   def game_over?
-    @tries_left.zero? || win
+    @tries_left.zero? || win?
   end
 
-  def win
-    if @word.chars.all? { |char| @guessed_letters.include?(char) }
-      puts 'You won!'
-      true
-    else
-      false
-    end
+  def win?
+    @word.chars.all? { |char| @guessed_letters.include?(char) }
   end
 end

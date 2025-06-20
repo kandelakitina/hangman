@@ -3,8 +3,9 @@
 
 require 'colorize'
 
-HANGMAN_STAGES = [
-  "
+module HangmanArt
+  STAGES = [
+    "
        ----
        |  |
        |
@@ -13,7 +14,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:blue),
-  "
+    "
        ----
        |  |
        |  O
@@ -22,7 +23,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:green),
-  "
+    "
        ----
        |  |
        |  O
@@ -31,7 +32,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:yellow),
-  "
+    "
        ----
        |  |
        |  O
@@ -40,7 +41,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:magenta),
-  "
+    "
        ----
        |  |
        |  O
@@ -49,7 +50,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:red),
-  "
+    "
        ----
        |  |
        |  O
@@ -58,7 +59,7 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:light_red),
-  "
+    "
        ----
        |  |
        |  O
@@ -67,4 +68,5 @@ HANGMAN_STAGES = [
        |
       ----
   ".colorize(:light_black)
-].freeze
+  ].freeze
+end
