@@ -19,13 +19,8 @@ class GameController
   def start_game
     print 'Do you want to load the game? (y/n): '
     case gets.chomp.downcase
-    when 'y'
-      puts 'Loading game...'
-      load_game
-      play_game
-    when 'n'
-      puts 'Starting a new game...'
-      play_game
+    when 'y' then load_game && play_game
+    when 'n' then play_game
     else
       puts "Invalid input. Please enter 'y' or 'n'."
       start_game

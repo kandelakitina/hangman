@@ -35,3 +35,7 @@ If you're on Nix use `nix develop` to load the Ruby environment and run `ruby ma
 ## Run on Ruby
 
 Otherwise, install Ruby and colorize gem with `gem install colorize` and run `ruby main`.
+
+## License
+
+This project is licensed under the MIT License.
