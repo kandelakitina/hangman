@@ -2,4 +2,4 @@
 
 require_relative 'lib/game_controller'
 
-GameController.new.play
+GameController.new.start_game
